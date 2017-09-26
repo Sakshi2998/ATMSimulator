@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stack" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atmsimulator.CashTransferController">
+   <children>
+      <AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="467.0" style="-fx-background-color: #ffffff;">
+         <children>
+            <JFXTextField fx:id="txtSendAccountNo" focusColor="#a30034" layoutX="130.0" layoutY="294.0" prefHeight="25.0" prefWidth="208.0" promptText="Enter Account Number" unFocusColor="#999999">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="txtAmount" focusColor="#a30034" layoutX="130.0" layoutY="366.0" prefHeight="25.0" prefWidth="208.0" promptText="Enter Amount" unFocusColor="#999999">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton fx:id="bttnContinue" buttonType="RAISED" layoutX="130.0" layoutY="457.0" onMouseClicked="#transfer" prefHeight="34.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #a40032;" text="TRANSFER" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font></JFXButton>
+            <JFXButton buttonType="RAISED" layoutX="-1.0" layoutY="46.0" onAction="#backToHome" prefHeight="34.0" prefWidth="72.0" ripplerFill="WHITE" style="-fx-background-color: #a40032;" text="&lt; BACK" textFill="WHITE">
+               <font>
+                  <Font name="Verdana" size="12.0" />
+               </font>
+            </JFXButton>
+            <ImageView fitHeight="106.0" fitWidth="117.0" layoutX="175.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <Text fx:id="accWarning" fill="#a40032" layoutX="355.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!" visible="false">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="amountWarning" fill="#a40032" layoutX="355.0" layoutY="387.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!" visible="false">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Text>
+            <Text fx:id="error" fill="RED" layoutX="95.0" layoutY="439.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="278.041015625">
+               <font>
+                  <Font name="Verdana" size="10.0" />
+               </font>
+            </Text>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

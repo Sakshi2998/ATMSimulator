@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="467.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atmsimulator.BalanceEnqController">
+   <children>
+      <ImageView fitHeight="112.0" fitWidth="118.0" layoutX="175.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <Text layoutX="43.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Account balance for account number" wrappingWidth="241.169921875">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="accountNo" fill="#a40032" layoutX="284.0" layoutY="315.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" 1234567890" textAlignment="CENTER" textOrigin="CENTER">
+         <font>
+            <Font name="Verdana Bold" size="13.0" />
+         </font>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+      </Text>
+      <Text layoutX="386.0" layoutY="320.0" strokeType="OUTSIDE" strokeWidth="0.0" text="is:" wrappingWidth="24.169921875">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Text>
+      <Text fx:id="balance" fill="#a40032" layoutX="21.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1000 " textAlignment="RIGHT" wrappingWidth="241.16991562396288">
+         <font>
+            <Font name="Verdana Bold" size="19.0" />
+         </font>
+      </Text>
+      <Text fill="#a40032" layoutX="277.0" layoutY="388.0" strokeType="OUTSIDE" strokeWidth="0.0" text="₹" textAlignment="RIGHT">
+         <font>
+            <Font name="Verdana Bold" size="19.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" layoutY="49.0" onAction="#backToHome" prefHeight="39.0" prefWidth="74.0" style="-fx-background-color: #a40032;" text="&lt; Back  " textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></JFXButton>
+   </children>
+</AnchorPane>

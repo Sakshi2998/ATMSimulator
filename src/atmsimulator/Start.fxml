@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXTabPane?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane fx:id="stack" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atmsimulator.StartController">
+   <children>
+      <AnchorPane id="AnchorPane" fx:id="anchorPane" prefHeight="568.0" prefWidth="467.0" style="-fx-background-color: #fff;">
+         <children>
+            <ImageView fitHeight="133.0" fitWidth="145.0" layoutX="161.0" layoutY="53.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/logo.png" />
+               </image>
+            </ImageView>
+            <JFXTabPane id="tabPane" fx:id="tabPane" layoutX="33.0" layoutY="185.0" prefHeight="367.0" prefWidth="401.0" stylesheets="@../CSS/tabpane.css" tabClosingPolicy="ALL_TABS">
+               <tabs>
+                  <Tab fx:id="loginTab" style="background-color: #fff;">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-background-color: #fff;">
+                           <children>
+                              <JFXTextField fx:id="lAccountNo" focusColor="#a30034" layoutX="96.0" layoutY="59.0" prefHeight="25.0" prefWidth="208.0" promptText="Enter Account Number" unFocusColor="#999999">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="lPin" focusColor="#a30034" layoutX="97.0" layoutY="112.0" prefHeight="25.0" prefWidth="208.0" promptText="Enter Pin code" unFocusColor="#999999">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></JFXPasswordField>
+                              <JFXButton fx:id="lContinue" buttonType="RAISED" layoutX="96.0" layoutY="197.0" onAction="#login" prefHeight="34.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #a40032;" text="CONTINUE" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font></JFXButton>
+                              <Text fx:id="lError" fill="RED" layoutX="61.0" layoutY="177.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="278.041015625">
+                                 <font>
+                                    <Font size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="lRegister" layoutX="153.0" layoutY="258.0" onMouseClicked="#switchToRegister" strokeType="OUTSIDE" strokeWidth="0.0" text="Not registered?" wrappingWidth="96.13671875">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="lAccWarning" fill="#a40032" layoutX="329.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="lPinWarning" fill="#a40032" layoutX="329.0" layoutY="133.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="registerTab">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="294.0" prefWidth="401.0" style="-fx-background-color: #fff;">
+                           <children>
+                              <JFXTextField fx:id="rName" focusColor="#a30034" layoutX="97.0" layoutY="16.0" prefHeight="25.0" prefWidth="221.0" promptText="Enter Name" unFocusColor="#999999">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXTextField fx:id="rAccountNo" focusColor="#a30034" layoutX="97.0" layoutY="65.0" prefHeight="25.0" prefWidth="221.0" promptText="Enter Account Number" unFocusColor="#999999">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </JFXTextField>
+                              <JFXPasswordField fx:id="rPin" focusColor="#a30034" layoutX="95.0" layoutY="117.0" prefHeight="25.0" prefWidth="107.0" promptText="Enter Pin " unFocusColor="#999999">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </JFXPasswordField>
+                              <JFXPasswordField fx:id="rRePin" focusColor="#a30034" layoutX="209.0" layoutY="117.0" prefHeight="25.0" prefWidth="109.0" promptText="Re-enter Pin " unFocusColor="#999999">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </JFXPasswordField>
+                              <JFXCheckBox fx:id="rTerms" layoutX="91.0" layoutY="173.0" onAction="#setRegisterEnabled" text="I agree the terms and conditions" textFill="#555555">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </JFXCheckBox>
+                              <JFXButton fx:id="rRegister" buttonType="RAISED" disable="true" layoutX="96.0" layoutY="233.0" onAction="#register" prefHeight="34.0" prefWidth="208.0" ripplerFill="WHITE" style="-fx-background-color: #a40032;" text="REGISTER" textFill="WHITE">
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </JFXButton>
+                              <Text fx:id="rLogin" layoutX="148.0" layoutY="299.0" onMouseClicked="#switchToLogin" strokeType="OUTSIDE" strokeWidth="0.0" text="Already Registered?" wrappingWidth="122.13671875">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <font>
+                                    <Font name="Verdana" size="12.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="rAccWarning" fill="#a40032" layoutX="341.0" layoutY="86.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="rPinWarning" fill="#a40032" layoutX="341.0" layoutY="138.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="rError" fill="RED" layoutX="61.0" layoutY="217.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="278.041015625">
+                                 <font>
+                                    <Font name="Verdana" size="10.0" />
+                                 </font>
+                              </Text>
+                              <Text fx:id="rNameWarning" fill="#a40032" layoutX="341.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="!" visible="false">
+                                 <font>
+                                    <Font name="System Bold" size="21.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+               </tabs>
+            </JFXTabPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>

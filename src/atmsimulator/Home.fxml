@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="568.0" prefWidth="467.0" style="-fx-background-color: #fff;" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="atmsimulator.HomeController">
+   <children>
+      <Text fx:id="txtWelcom" fill="#a40032" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome, Sakshi Katkar" textAlignment="CENTER" wrappingWidth="467.0">
+         <font>
+            <Font name="Verdana" size="15.0" />
+         </font>
+      </Text>
+      <Text fx:id="txtOperation" layoutX="156.0" layoutY="289.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose your operation">
+         <font>
+            <Font name="Verdana" size="13.0" />
+         </font>
+      </Text>
+      <ImageView fx:id="imgAxisBank" fitHeight="98.0" fitWidth="102.0" layoutX="179.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/logo.png" />
+         </image>
+      </ImageView>
+      <JFXButton fx:id="btnBalanceEnq" buttonType="RAISED" layoutX="93.0" layoutY="346.0" onAction="#balanceEnquiry" prefHeight="68.0" prefWidth="137.0" style="-fx-background-color: #a40032;" text="Balance Enquiry" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnCashTrans" buttonType="RAISED" layoutX="237.0" layoutY="346.0" onAction="#cashTransfer" prefHeight="68.0" prefWidth="137.0" style="-fx-background-color: #a40032;" text="Cash Transfer" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnCashWithdrawal" buttonType="RAISED" layoutX="93.0" layoutY="421.0" onAction="#cashwithdrawal" prefHeight="68.0" prefWidth="137.0" style="-fx-background-color: #a40032;" text="Cash Withdrawal" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></JFXButton>
+      <JFXButton fx:id="btnChangePin" buttonType="RAISED" layoutX="237.0" layoutY="421.0" onAction="#changepin" prefHeight="68.0" prefWidth="137.0" style="-fx-background-color: #a40032;" text="Change PIN" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font></JFXButton>
+      <Text fx:id="txtNeedHelp" fill="#a40032" layoutX="202.0" layoutY="539.0" onMouseClicked="#help" strokeType="OUTSIDE" strokeWidth="0.0" text="Need Help?">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </Text>
+      <JFXButton fx:id="btnBalanceEnq1" buttonType="RAISED" layoutY="28.0" onAction="#logout" prefHeight="34.0" prefWidth="72.0" style="-fx-background-color: #a40032;" text="Logout" textFill="WHITE">
+         <font>
+            <Font name="Verdana" size="12.0" />
+         </font>
+      </JFXButton>
+   </children>
+</AnchorPane>
