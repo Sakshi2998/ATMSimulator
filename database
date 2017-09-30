@@ -1,0 +1,15 @@
+create database banking;
+use banking;
+create table userinfo(account_no varchar(10) primary key, name varchar(30), pin varchar(4), balance bigint(15));
+describe userinfo;
+
+
+You should get the following table description:
++------------+-------------+------+-----+---------+-------+
+| Field      | Type        | Null | Key | Default | Extra |
++------------+-------------+------+-----+---------+-------+
+| account_no | varchar(10) | NO   | PRI | NULL    |       |
+| name       | varchar(30) | YES  |     | NULL    |       |
+| pin        | varchar(4)  | YES  |     | NULL    |       |
+| balance    | bigint(15)  | YES  |     | NULL    |       |
++------------+-------------+------+-----+---------+-------+
